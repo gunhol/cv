@@ -1,0 +1,51 @@
+---
+import '@fontsource-variable/nunito-sans';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#fff4e6" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <slot />
+    <script is:inline>
+      (() => {
+        const disclosures = [...document.querySelectorAll('details[data-responsibilities]')];
+        let printState = [];
+        let printing = false;
+
+        document.querySelectorAll('[data-print]').forEach((button) => {
+          button.addEventListener('click', () => window.print());
+        });
+
+        window.addEventListener('beforeprint', () => {
+          if (printing) return;
+          printing = true;
+          printState = disclosures.map((detail) => detail.open);
+          disclosures.forEach((detail) => { detail.open = true; });
+        });
+
+        window.addEventListener('afterprint', () => {
+          disclosures.forEach((detail, index) => { detail.open = printState[index]; });
+          printing = false;
+        });
+      })();
+    </script>
+  </body>
+</html>

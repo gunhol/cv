@@ -1,0 +1,32 @@
+---
+interface Props {
+  personal: {
+    name: string;
+    role: string;
+    roleStartDate: string;
+    summary: string;
+    email: string;
+    location: string;
+    languages: string[];
+  };
+}
+
+const { personal } = Astro.props;
+---
+<section class="profile-record" aria-labelledby="profile-heading">
+  <div class="profile-copy">
+    <h1 id="profile-heading">Software built close to the problem.</h1>
+    <p class="profile-role">{personal.role}</p>
+    <p class="profile-summary">{personal.summary}</p>
+    <ul class="language-list" aria-label="Languages">
+      {personal.languages.map((language) => <li>{language}</li>)}
+    </ul>
+    <p class="print-contact">{personal.email}<br />{personal.location}</p>
+  </div>
+  <aside class="current-role" aria-label="Current role at Sanitas">
+    <h2>Now at Sanitas</h2>
+    <p class="current-title">{personal.role}</p>
+    <p class="current-date">Since {personal.roleStartDate}</p>
+    <p>Applying engineering directly to stakeholder needs and turning them into shipped solutions.</p>
+  </aside>
+</section>

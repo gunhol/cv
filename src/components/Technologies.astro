@@ -1,0 +1,23 @@
+---
+import type { SkillCategory } from '../data/cv';
+
+interface Props {
+  skills: SkillCategory[];
+}
+
+const { skills } = Astro.props;
+---
+<section id="technologies" class="content-section" aria-labelledby="technologies-heading">
+  <div class="section-heading">
+    <h2 id="technologies-heading">Technologies</h2>
+    <p>The languages, systems, and tools behind the work.</p>
+  </div>
+  <div class="skills-grid">
+    {skills.map((category) => (
+      <article class="skill-group">
+        <h3>{category.name}</h3>
+        <p>{category.skills.join(' · ')}</p>
+      </article>
+    ))}
+  </div>
+</section>

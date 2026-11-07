@@ -1,0 +1,48 @@
+---
+import type { Experience } from '../data/cv';
+import Icon from './Icon.astro';
+
+interface Props {
+  experiences: Experience[];
+}
+
+const { experiences } = Astro.props;
+---
+<section id="experience" class="content-section" aria-labelledby="experience-heading">
+  <div class="section-heading">
+    <h2 id="experience-heading">Experience</h2>
+    <p>{experiences.length} roles across engineering, product, and technical leadership.</p>
+  </div>
+  <div class="job-list">
+    {experiences.map((experience) => {
+      const isCurrent = experience.endDate === 'Present';
+      return (
+        <article class="job-record">
+          <div class="job-date">
+            <span>{experience.startDate}</span>
+            <span aria-hidden="true">→</span>
+            <span>{experience.endDate}</span>
+          </div>
+          <div class="job-main">
+            <h3>{experience.role}</h3>
+            <p class="job-company">{experience.company}</p>
+            <p class="job-location">{experience.location}</p>
+            {experience.description && experience.description.length > 0 && (
+              <details class="responsibilities" data-responsibilities>
+                <summary>
+                  <span class="when-closed">View responsibilities</span>
+                  <span class="when-open">Hide responsibilities</span>
+                  <Icon name="chevron" />
+                </summary>
+                <ul>
+                  {experience.description.map((item) => <li>{item}</li>)}
+                </ul>
+              </details>
+            )}
+          </div>
+          {isCurrent && <p class="job-status">Current</p>}
+        </article>
+      );
+    })}
+  </div>
+</section>

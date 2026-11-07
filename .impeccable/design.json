@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T12:22:40+01:00",
+  "title": "Design System: Gunnar Hollander CV",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Warm Peach",
+        "canonical": "oklch(96.5% 0.024 76)",
+        "tonalRamp": ["oklch(15% 0.012 76)", "oklch(26% 0.018 76)", "oklch(38% 0.024 76)", "oklch(50% 0.032 76)", "oklch(62% 0.038 76)", "oklch(74% 0.040 76)", "oklch(86% 0.034 76)", "oklch(96.5% 0.024 76)"]
+      },
+      "current-surface": {
+        "role": "neutral",
+        "displayName": "Pale Peach",
+        "canonical": "oklch(95.5% 0.025 55)",
+        "tonalRamp": ["oklch(15% 0.010 55)", "oklch(26% 0.016 55)", "oklch(38% 0.022 55)", "oklch(50% 0.030 55)", "oklch(62% 0.038 55)", "oklch(74% 0.042 55)", "oklch(86% 0.036 55)", "oklch(95.5% 0.025 55)"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(74% 0 0)", "oklch(86% 0 0)", "oklch(100% 0 0)"]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Warm Ink",
+        "canonical": "oklch(24% 0.012 70)",
+        "tonalRamp": ["oklch(15% 0.008 70)", "oklch(24% 0.012 70)", "oklch(36% 0.016 70)", "oklch(48% 0.018 70)", "oklch(60% 0.017 70)", "oklch(72% 0.014 70)", "oklch(84% 0.010 70)", "oklch(95% 0.005 70)"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Warm Ink",
+        "canonical": "oklch(48% 0.018 65)",
+        "tonalRamp": ["oklch(15% 0.008 65)", "oklch(27% 0.012 65)", "oklch(38% 0.015 65)", "oklch(48% 0.018 65)", "oklch(60% 0.018 65)", "oklch(72% 0.015 65)", "oklch(84% 0.010 65)", "oklch(95% 0.005 65)"]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Warm Line",
+        "canonical": "oklch(89.5% 0.018 65)",
+        "tonalRamp": ["oklch(15% 0.006 65)", "oklch(27% 0.008 65)", "oklch(39% 0.010 65)", "oklch(51% 0.012 65)", "oklch(63% 0.014 65)", "oklch(75% 0.016 65)", "oklch(89.5% 0.018 65)", "oklch(96% 0.008 65)"]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Action Orange",
+        "canonical": "oklch(67.8% 0.196 39)",
+        "tonalRamp": ["oklch(15% 0.035 39)", "oklch(26% 0.070 39)", "oklch(38% 0.115 39)", "oklch(49% 0.155 39)", "oklch(58% 0.180 39)", "oklch(67.8% 0.196 39)", "oklch(80% 0.130 39)", "oklch(95% 0.035 39)"]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Deep Action Orange",
+        "canonical": "oklch(62% 0.19 39)",
+        "tonalRamp": ["oklch(15% 0.035 39)", "oklch(26% 0.070 39)", "oklch(38% 0.115 39)", "oklch(49% 0.155 39)", "oklch(62% 0.19 39)", "oklch(72% 0.165 39)", "oklch(83% 0.105 39)", "oklch(95% 0.035 39)"]
+      },
+      "action-text": {
+        "role": "primary",
+        "displayName": "Burnt Orange",
+        "canonical": "oklch(47% 0.14 38)",
+        "tonalRamp": ["oklch(15% 0.030 38)", "oklch(26% 0.065 38)", "oklch(36% 0.105 38)", "oklch(47% 0.14 38)", "oklch(59% 0.165 38)", "oklch(71% 0.160 38)", "oklch(83% 0.100 38)", "oklch(95% 0.030 38)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The profile promise only, fluid across small and large screens." },
+      "headline": { "displayName": "Headline", "purpose": "Major CV sections." },
+      "title": { "displayName": "Title", "purpose": "Experience roles and record-level subjects." },
+      "body": { "displayName": "Body", "purpose": "Summaries, companies, responsibilities, and skills." },
+      "label": { "displayName": "Label", "purpose": "Navigation, dates, actions, and disclosures." }
+    },
+    "shadows": [
+      {
+        "name": "profile-lift",
+        "value": "0 14px 36px oklch(35% 0.03 55 / 0.07)",
+        "purpose": "Diffuse ambient separation for the lead profile record only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-feedback",
+        "value": "background-color 160ms ease-out, border-color 160ms ease-out, transform 120ms ease-out",
+        "purpose": "Short hover and press feedback for buttons."
+      },
+      {
+        "name": "disclosure-chevron",
+        "value": "transform 180ms ease-out",
+        "purpose": "Subtle disclosure state rotation; removed for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      { "name": "desktop", "value": "768px" },
+      { "name": "wide", "value": "1100px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Email Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The dominant contact action with a drawn mail icon.",
+      "html": "<a class=\"ds-button-primary\" href=\"mailto:contact@hollander.one\" aria-label=\"Email Gunnar\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"m3 7 9 6 9-6\"/></svg><span>Email</span></a>",
+      "css": ".ds-button-primary{min-height:44px;border:1px solid transparent;border-radius:var(--control-radius);padding:10px 15px;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--color-action);color:var(--color-text);font-family:'Nunito Sans Variable',sans-serif;font-size:14px;font-weight:750;line-height:1.2;text-decoration:none;cursor:pointer;transition:background-color 160ms ease-out,transform 120ms ease-out}.ds-button-primary:hover{background:var(--color-action-hover)}.ds-button-primary:active{transform:scale(.98)}.ds-button-primary:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px}.ds-icon{width:20px;height:20px;flex:0 0 auto}"
+    },
+    {
+      "name": "Quiet Print Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "The secondary print action, visually subordinate to email.",
+      "html": "<button class=\"ds-button-quiet\" type=\"button\" aria-label=\"Print CV\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 9V3h12v6\"/><path d=\"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\"/><rect x=\"6\" y=\"14\" width=\"12\" height=\"7\"/></svg><span>Print</span></button>",
+      "css": ".ds-button-quiet{min-height:44px;border:1px solid var(--color-border);border-radius:var(--control-radius);padding:10px 15px;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--color-text);font-family:'Nunito Sans Variable',sans-serif;font-size:14px;font-weight:750;line-height:1.2;cursor:pointer;transition:background-color 160ms ease-out,border-color 160ms ease-out,transform 120ms ease-out}.ds-button-quiet:hover{background:var(--color-surface);border-color:var(--color-muted)}.ds-button-quiet:active{transform:scale(.98)}.ds-button-quiet:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px}.ds-icon{width:20px;height:20px;flex:0 0 auto}"
+    },
+    {
+      "name": "Section Navigation",
+      "kind": "nav",
+      "description": "Three muted anchors with direct section targets.",
+      "html": "<nav class=\"ds-section-nav\" aria-label=\"CV sections\"><a href=\"#experience\">Experience</a><a href=\"#technologies\">Technologies</a><a href=\"#education\">Education</a></nav>",
+      "css": ".ds-section-nav{display:flex;align-items:center;justify-content:space-between;gap:8px}.ds-section-nav a{min-height:44px;display:inline-flex;align-items:center;padding:0 4px;color:var(--color-muted);font-family:'Nunito Sans Variable',sans-serif;font-size:14px;font-weight:650;text-decoration:none;text-underline-offset:4px}.ds-section-nav a:hover{color:var(--color-text);text-decoration:underline}.ds-section-nav a:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px}"
+    },
+    {
+      "name": "Profile Record",
+      "kind": "card",
+      "refersTo": "record",
+      "description": "The elevated lead record for the profile promise and current role.",
+      "html": "<section class=\"ds-profile-record\"><div class=\"ds-profile-copy\"><h1>Software built close to the problem.</h1><p class=\"ds-profile-role\">Forward Deployed Engineer</p><p class=\"ds-profile-summary\">Working closely with users and stakeholders to turn business needs into shipped software solutions.</p></div></section>",
+      "css": ".ds-profile-record{overflow:hidden;border:1px solid var(--color-border);border-radius:var(--record-radius);background:var(--color-surface);box-shadow:var(--shadow-record);color:var(--color-text);font-family:'Nunito Sans Variable',sans-serif}.ds-profile-copy{padding:28px 24px}.ds-profile-record h1{max-width:15ch;margin:0 0 16px;font-size:clamp(2.25rem,10vw,3.25rem);font-weight:720;letter-spacing:-.035em;line-height:1.04;text-wrap:balance}.ds-profile-role{margin:0 0 20px;font-size:22px;font-weight:650;line-height:1.25}.ds-profile-summary{max-width:68ch;margin:0;color:var(--color-muted);font-size:17px;line-height:1.65}"
+    },
+    {
+      "name": "Experience Record",
+      "kind": "card",
+      "refersTo": "record",
+      "description": "A flat chronological record with date, role, company, and location.",
+      "html": "<article class=\"ds-job-record\"><div class=\"ds-job-date\">Dec 2026 → Present</div><div class=\"ds-job-main\"><h3>Forward Deployed Engineer</h3><p class=\"ds-job-company\">Sanitas Krankenversicherung</p><p class=\"ds-job-location\">Zürich</p></div><p class=\"ds-job-status\">Current</p></article>",
+      "css": ".ds-job-record{padding:20px;display:grid;gap:12px;border:1px solid var(--color-border);border-radius:var(--record-radius);background:var(--color-surface);color:var(--color-text);font-family:'Nunito Sans Variable',sans-serif}.ds-job-date{align-content:flex-start;color:var(--color-muted);font-size:14px;font-variant-numeric:tabular-nums;font-weight:650}.ds-job-main h3{margin:0 0 4px;font-size:19px;font-weight:750;line-height:1.3}.ds-job-company{margin:0 0 2px;font-size:16px;font-weight:600;line-height:1.4}.ds-job-location{margin:0;color:var(--color-muted);font-size:14px}.ds-job-status{margin:0;color:var(--color-muted);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}"
+    },
+    {
+      "name": "Responsibility Disclosure",
+      "kind": "custom",
+      "description": "A native keyboard-accessible disclosure for detailed responsibilities.",
+      "html": "<details class=\"ds-responsibilities\"><summary><span>View responsibilities</span><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></summary><ul><li>Working closely with users and stakeholders to turn business needs into shipped software solutions</li></ul></details>",
+      "css": ".ds-responsibilities{margin-top:12px;border-top:1px solid var(--color-border);color:var(--color-text);font-family:'Nunito Sans Variable',sans-serif}.ds-responsibilities summary{min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;color:var(--color-action-text);font-size:14px;font-weight:750;list-style:none}.ds-responsibilities summary::-webkit-details-marker{display:none}.ds-responsibilities summary:hover{color:var(--color-text)}.ds-responsibilities summary:focus-visible{outline:3px solid var(--color-focus);outline-offset:4px}.ds-responsibilities .ds-icon{width:20px;height:20px;transition:transform 180ms ease-out}.ds-responsibilities[open] .ds-icon{transform:rotate(180deg)}.ds-responsibilities ul{margin:0;padding:0 0 4px 20px}.ds-responsibilities li{padding-left:4px;margin-bottom:8px;line-height:1.55}.ds-responsibilities li::marker{color:var(--color-action-text)}"
+    },
+    {
+      "name": "Current Role Inset",
+      "kind": "custom",
+      "refersTo": "current-role",
+      "description": "A tonal region inside the profile record, not a nested card.",
+      "html": "<aside class=\"ds-current-role\" aria-label=\"Current role at Sanitas\"><h2>Now at Sanitas</h2><p class=\"ds-current-title\">Forward Deployed Engineer</p><p class=\"ds-current-date\">Since December 2026</p><p>Applying engineering directly to stakeholder needs and turning them into shipped solutions.</p></aside>",
+      "css": ".ds-current-role{padding:28px 24px;border-top:1px solid var(--color-border);background:var(--peach-100);color:var(--color-text);font-family:'Nunito Sans Variable',sans-serif}.ds-current-role h2{margin:0 0 20px;font-size:18px;font-weight:750}.ds-current-title{margin:0 0 4px;font-size:22px;font-weight:700;line-height:1.25}.ds-current-date{margin:0 0 20px;color:var(--color-muted);font-size:14px}.ds-current-role p:last-child{max-width:38ch;margin:0;font-size:15px;line-height:1.6}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Applied Record",
+    "overview": "The system presents engineering experience as an ordered set of useful records rather than a decorative developer portfolio. A warm peach field, white reading surfaces, and rounded humanist type make the CV approachable while preserving professional clarity. Orange is scarce and actionable, so contact and disclosure controls are immediately identifiable.\n\nDensity is deliberate: concise records support scanning, native disclosures reveal detail, and print expands into a complete document. Depth comes from tonal layering and a single soft profile shadow, not effects or animation. The interface stays static, readable, and functional before any visual refinement.",
+    "keyCharacteristics": [
+      "Warm peach ground with white, soft-cornered records",
+      "One self-hosted humanist sans across every level",
+      "Orange reserved for actions and disclosure cues",
+      "Chronological records with accessible on-demand detail",
+      "Minimal motion and a complete print equivalent"
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "Saturated orange belongs to actions and disclosure cues only; large fields, decorative graphics, and heading text stay neutral.", "section": "colors" },
+      { "name": "The One Family Rule", "body": "Use weight, size, spacing, and small caps-like status styling for contrast; do not add a decorative serif, monospace, or system display face.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Experience and education records stay flat; use borders and tonal changes before adding another shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep email as the dominant orange action and print as the quiet secondary action.",
+      "Do preserve the Experience, Technologies, Education reading order.",
+      "Do use semantic records, native disclosures, visible focus, and complete print output.",
+      "Do keep body copy within a comfortable reading measure and let long names wrap naturally."
+    ],
+    "donts": [
+      "Don't nest cards or turn the current role into a separate floating card.",
+      "Don't add decorative gradients, animation, metrics, testimonials, or unsupported claims.",
+      "Don't use orange for large backgrounds, headings, or non-action decoration.",
+      "Don't introduce external font requests, icon fonts, or a client UI framework.",
+      "Don't restore a floating mobile action that can obscure reading content."
+    ]
+  }
+}

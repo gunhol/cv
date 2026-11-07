@@ -1,0 +1,26 @@
+---
+import type { Education } from '../data/cv';
+
+interface Props {
+  education: Education[];
+}
+
+const { education } = Astro.props;
+---
+<section id="education" class="content-section" aria-labelledby="education-heading">
+  <div class="section-heading">
+    <h2 id="education-heading">Education</h2>
+    <p>Technical and vocational foundations in Zürich.</p>
+  </div>
+  <div class="education-record">
+    {education.map((entry) => (
+      <article class="education-entry">
+        <div>
+          <h3>{entry.school}</h3>
+          <p>{entry.degree}</p>
+        </div>
+        <p class="education-date">{entry.startDate} — {entry.endDate}</p>
+      </article>
+    ))}
+  </div>
+</section>

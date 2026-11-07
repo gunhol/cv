@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import Profile from '../components/Profile.astro';
+import Experience from '../components/Experience.astro';
+import Technologies from '../components/Technologies.astro';
+import Education from '../components/Education.astro';
+import { cvData } from '../data/cv';
+
+const { personal } = cvData;
+---
+<Layout
+  title={`${personal.name} · ${personal.role}`}
+  description="Gunnar Hollander is a Forward Deployed Engineer in Zürich with over a decade of software engineering experience across Swiss banking and healthcare."
+>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Gunnar Hollander, back to top">{personal.name}</a>
+      <nav class="section-nav" aria-label="CV sections">
+        <a href="#experience">Experience</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#education">Education</a>
+      </nav>
+      <div class="header-actions">
+        <button class="button button-quiet" type="button" data-print aria-label="Print CV">
+          <Icon name="print" />
+          <span>Print</span>
+        </button>
+        <a class="button button-primary header-email" href={`mailto:${personal.email}`} aria-label="Email Gunnar">
+          <Icon name="mail" />
+          <span>Email</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell">
+    <Profile personal={personal} />
+    <Experience experiences={cvData.experience} />
+    <Technologies skills={cvData.skills} />
+    <Education education={cvData.education} />
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>{personal.name}</strong>
+      <span>{personal.location}</span>
+    </div>
+    <a href="#top">Back to top</a>
+  </footer>
+</Layout>
